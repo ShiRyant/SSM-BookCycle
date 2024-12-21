@@ -1,5 +1,8 @@
 import com.jycz.bookcycle.mapper.BookMapper;
+import com.jycz.bookcycle.mapper.CommentMapper;
+import com.jycz.bookcycle.mapper.UserMapper;
 import com.jycz.bookcycle.model.Book;
+import com.jycz.bookcycle.model.Comment;
 import com.jycz.bookcycle.model.User;
 import com.jycz.bookcycle.service.BookService;
 import com.jycz.bookcycle.service.UserService;
@@ -23,6 +26,8 @@ public class TestMybatis {
     private BookService bookService;
     @Autowired
     private BookMapper bookMapper;
+    @Autowired
+    private CommentMapper commentMapper;
 
     @Test
     public void testInsertUser(){
@@ -55,5 +60,16 @@ public class TestMybatis {
         for(Book book:list){
             System.out.println(book);
         }
+    }
+
+    @Test
+    public void testD(){
+        Comment comment = new Comment();
+        comment.setBookId(1);
+        comment.setUserId("6462801957");
+        comment.setUsername("Kobe");
+        comment.setContent("Man! What can I say? Manba out");
+        comment.setCommentTime(new Date());
+        commentMapper.saveComment(comment);
     }
 }

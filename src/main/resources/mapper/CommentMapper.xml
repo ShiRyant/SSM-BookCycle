@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.jycz.bookcycle.mapper.CommentMapper">
+    <insert id="saveComment" parameterType="com.jycz.bookcycle.model.Comment" useGeneratedKeys="true">
+        INSERT INTO Comment(book_id, user_id, username, content, comment_time)
+        VALUES (#{bookId}, #{userId}, #{username}, #{content}, #{commentTime})
+    </insert>
+    
+    <select id="selectCommentByBookId" resultType="com.jycz.bookcycle.model.Comment">
+        SELECT * FROM Comment WHERE book_id = #{bookId}
+    </select>
+</mapper>
