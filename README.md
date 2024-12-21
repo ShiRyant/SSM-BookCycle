@@ -1,1 +1,1 @@
-# 基于 Struts2 + Spring + Mybatis 开发的简易二手书交易平台
+# 基于 Struts2 + Spring + Mybatis 开发的二手书交易平台
