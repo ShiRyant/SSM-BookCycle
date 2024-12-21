@@ -1,0 +1,280 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f7f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
+}
+.in_container{
+    display: flex;
+    flex-direction: column; /* 纵向排列 */
+    overflow-y: auto;
+}
+.out-container{
+    display: flex;
+    flex-direction: column; /* 纵向排列 */
+    justify-content: center;
+    overflow-y: auto;
+    margin-top: 20px;
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+.left-panel, .right-panel {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.left-panel {
+    flex: 5;
+    margin-right: 20px;
+}
+
+.right-panel {
+    flex: 1;
+}
+
+.book-details h1, .book-reviews h2, .right-panel h2 {
+    color: #d32f2f;
+    margin-top: 0;
+}
+
+.book-details p, .review-content {
+    color: #333;
+    line-height: 1.6;
+}
+.review-content{
+    margin-top: -25px;
+    font-size: 19px;
+    position: absolute;
+}
+.book-details ol, .book-reviews ul {
+    padding-left: 20px;
+}
+
+.book-reviews ul li {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    list-style-type: none; /* 移除列表标记 */
+    padding: 0;
+}
+
+
+.reviewer {
+    font-weight: bold;
+    color: #1e88e5;
+    font-size: 18px;
+}
+
+.review-date {
+    color: #9e9e9e;
+    margin-top: 10px;
+    margin-left: 700px;
+    font-size: 22px;
+}
+
+.recommendations {
+    list-style: none;
+    padding: 0;
+}
+
+.recommendations li {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.recommendations img {
+    width: 70%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.recommendations span {
+    display: block;
+    margin-top: 5px;
+    color: #333;
+}
+.content-summary {
+    display: inline-block;
+    background-color: black;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+}
+.text {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 10; /*表示最多也只能10行*/
+    -webkit-box-orient: vertical;
+}
+
+.read-more-btn {
+    background: none; /* 移除背景色 */
+    border: none; /* 移除边框 */
+    padding: 0; /* 移除内边距 */
+    margin: 0; /* 移除外边距 */
+    cursor: pointer; /* 鼠标悬停时显示指针 */
+    color: #1A66B3; /* 链接颜色 */
+    font: inherit; /* 继承字体样式 */
+}
+.head_portrait{
+    flex:1;
+}
+.head_portrait img{
+    margin-top: -10px;
+}
+.parent-container {
+    display: flex; /* 启用Flexbox布局 */
+}
+.user_info{
+    flex:7;
+}
+.recommended-book {
+    margin: 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+}
+.book-info {
+    padding: 5px;
+}
+
+.book-title, .author {
+    margin: 5px 0;
+
+}
+.book-title{
+    font-size: 16px;
+}
+.author{
+    color: #9B9B9B;
+    font-size: 16px;
+}
+
+.price1 {
+    position: relative;
+}
+
+.original-price {
+    text-decoration: line-through; /* 划掉原价 */
+    color:#9B9B9B;
+    font-size: 15px;
+}
+.recommended-book img{
+    width: 60%;
+}
+.current-price {
+    font-weight: bold;
+    margin-right: 70px;
+    color: #DA0000;
+    font-size: 16px;
+}
+.recommendation {
+    background-color: white;
+    color: black;
+    padding: 10px; /* 内边距 */
+    border-radius: 5px; /* 圆角 */
+    font-size: 16px; /* 字体大小 */
+    font-weight: bold; /* 字体加粗 */
+    display: inline-block; /* 使背景只覆盖文字区域 */
+}
+.product {
+    display: flex;
+    /*align-items: flex-start;*/
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 1500px;
+    height: 500px;
+}
+
+p.hover:hover{
+    color: #007BFF; /* 悬停时的颜色 */
+    text-decoration: underline;
+}
+
+.product-info {
+    flex-grow: 1;
+    margin-top: 50px;
+}
+
+.product-info h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+/*.product-info p {*/
+/*    margin: 5px 0;*/
+/*    color: #555;*/
+/*}*/
+
+.price {
+    color: #e74c3c;
+    font-size: 1.2em;
+}
+
+.stock {
+    color: #2ecc71;
+}
+
+.quantity {
+    padding: 8px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    margin-right: 10px;
+    height: 12px;
+    text-align: left;
+}
+
+.quantity button {
+    padding: 5px 10px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.quantity button:hover {
+    background-color: #2980b9;
+}
+
+.quantity-input {
+    padding: 8px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    margin-right: 10px;
+    width: 50px;
+    height: 12px;
+    text-align: left;
+}
+
+.add-to-cart {
+    padding: 10px 20px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.add-to-cart:hover {
+    background-color: #c0392b;
+}

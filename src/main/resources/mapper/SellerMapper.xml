@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.jycz.bookcycle.mapper.SellerMapper">
+    <insert id="save" parameterType="com.jycz.bookcycle.model.Seller">
+        INSERT INTO Seller(seller_id, user_id, real_name, seller_phone, id_card_no, address)
+        VALUES (#{sellerId}, #{userId}, #{realName}, #{sellerPhone}, #{idCardNo}, #{address})
+    </insert>
+
+    <delete id="delete">
+        DELETE FROM Seller WHERE user_id = #{user_id}
+    </delete>
+
+    <update id="update" parameterType="com.jycz.bookcycle.model.Seller">
+        UPDATE Seller
+        SET real_name = #{realName}, seller_phone = #{sellerPhone},
+            id_card_no = #{idCardNo}, address = #{address}
+        WHERE seller_id = #{sellerId}
+    </update>
+
+    <select id="getSellerById">
+        SELECT seller_id, user_id, real_name, seller_phone, id_card_no, address
+        FROM Seller WHERE user_id = #{userId}
+    </select>
+</mapper>

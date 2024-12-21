@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.jycz.bookcycle.mapper.BookMapper">
+    <insert id="save" parameterType="com.jycz.bookcycle.model.Book">
+        INSERT INTO Book(book_id, title, author, publisher, isbn, category, price, description, image)
+        VALUES (#{bookId}, #{title}, #{author}, #{publisher}, #{isbn},#{category}, #{price}, #{description}, #{image})
+    </insert>
+
+    <select id="findById" resultType="com.jycz.bookcycle.model.Book">
+        SELECT book_id, title, author, publisher, isbn, category, price, description, image
+        FROM Book WHERE book_id = #{bookId}
+    </select>
+
+    <delete id="delete">
+        DELETE FROM Book WHERE book_id = #{bookId}
+    </delete>
+
+    <update id="update" parameterType="com.jycz.bookcycle.model.Book">
+        UPDATE Book
+        SET book_id = #{bookId}, title = #{title}, author = #{author}, publisher = #{publisher},
+            isbn = #{isbn}, category = #{category}, price = #{price},
+            description = #{description}, image = #{image}
+        WHERE book_id = #{bookId}
+    </update>
+    
+    <select id="getRandomBooks" resultType="com.jycz.bookcycle.model.Book">
+        SELECT book_id, title, author, price FROM Book
+        ORDER BY RAND()
+        LIMIT #{count}
+    </select>
+
+    <select id="getBooksByName" resultType="com.jycz.bookcycle.model.Book">
+        SELECT * FROM Book WHERE title LIKE CONCAT('%', #{bookName}, '%')
+    </select>
+
+    <select id="getBooksByCategory" resultType="com.jycz.bookcycle.model.Book">
+        SELECT * FROM Book WHERE category = #{category}
+    </select>
+</mapper>
