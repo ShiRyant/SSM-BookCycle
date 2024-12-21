@@ -74,5 +74,8 @@
         <action name="removeCartItem" class="com.jycz.bookcycle.action.CartAction" method="removeItem">
             <result name="success">/cart.jsp</result>
         </action>
+        <action name="commentAction-*" class="commentAction" method="{1}">
+            <result name="addComment" type="redirectAction">homeAction</result>
+        </action>
     </package>
 </struts>

@@ -8,6 +8,30 @@
     <link rel="stylesheet" href="details.css">
     <link rel="stylesheet" href="navbar.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .submit-button {
+            padding: 8px 15px;
+            border: none;
+            border-radius: 4px;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+            margin-left: 20px;
+        }
+        .submit-button:hover {
+            background-color: #0069d9;
+        }
+        .comment-input {
+            padding: 8px;
+            border: 2px solid #ced4da;
+            border-radius: 4px;
+            margin: -3px 6px 6px;
+            width: 1134px;
+            height: 120px;
+            font-size: 20px;
+            font-family: 'Arial', sans-serif;
+        }
+    </style>
 </head>
 <body>
 <script src="loadNavbar.js"></script>
@@ -57,176 +81,30 @@
             </div>
             <div class="book-reviews">
                 <h2 style="background-color: black;color: white;padding: 10px">图书评价</h2>
+                <s:if test="#session.user != null">
+                    <s:form action="commentAction-addComment" namespace="/">
+                        <laber for="commentBox"><h3>分享你对书籍的看法...<button type="submit" class="submit-button">发送评论</button></h3></laber>
+                        <s:textarea id="commentBox" name="content" cssClass="comment-input"/>
+                        <input type="hidden" name="bookId" value="<s:property value="book.bookId"/>">
+                        <input type="hidden" name="userId" value="<s:property value="#session.user.userId"/>">
+                        <input type="hidden" name="username" value="<s:property value="#session.user.username"/>">
+                    </s:form>
+                </s:if>
                 <ul>
-                    <li>
-                        <div class="parent-container">
-                            <div class="head_portrait">
-                                <img src="images/default.png" height="100px" width="100px">
+                    <s:iterator value="" var="">
+                        <li>
+                            <div class="parent-container">
+                                <div class="head_portrait">
+                                    <img src="images/default.png" height="100px" width="100px">
+                                </div>
+                                <div class="user_info">
+                                    <div class="reviewer">cimeo</div>
+                                    <div class="review-date">2024年11月18日 20:47</div>
+                                    <div class="review-content">图书质量很好，希望更多的朋友能看。</div>
+                                </div>
                             </div>
-                            <div class="user_info">
-                                <div class="reviewer">cimeo</div>
-                                <div class="review-date">2024年11月18日 20:47</div>
-                                <div class="review-content">图书质量很好，希望更多的朋友能看。</div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="parent-container">
-                            <div class="head_portrait">
-                                <img src="images/default.png" height="100px" width="100px">
-                            </div>
-                            <div class="user_info">
-                                <div class="reviewer">cimeo</div>
-                                <div class="review-date">2024年11月18日 20:47</div>
-                                <div class="review-content">图书质量很好，希望更多的朋友能看。</div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="parent-container">
-                            <div class="head_portrait">
-                                <img src="images/default.png" height="100px" width="100px">
-                            </div>
-                            <div class="user_info">
-                                <div class="reviewer">cimeo</div>
-                                <div class="review-date">2024年11月18日 20:47</div>
-                                <div class="review-content">图书质量很好，希望更多的朋友能看。</div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="parent-container">
-                            <div class="head_portrait">
-                                <img src="images/default.png" height="100px" width="100px">
-                            </div>
-                            <div class="user_info">
-                                <div class="reviewer">cimeo</div>
-                                <div class="review-date">2024年11月18日 20:47</div>
-                                <div class="review-content">图书质量很好，希望更多的朋友能看。</div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="parent-container">
-                            <div class="head_portrait">
-                                <img src="images/default.png" height="100px" width="100px">
-                            </div>
-                            <div class="user_info">
-                                <div class="reviewer">cimeo</div>
-                                <div class="review-date">2024年11月18日 20:47</div>
-                                <div class="review-content">图书质量很好，希望更多的朋友能看。</div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="parent-container">
-                            <div class="head_portrait">
-                                <img src="images/default.png" height="100px" width="100px">
-                            </div>
-                            <div class="user_info">
-                                <div class="reviewer">cimeo</div>
-                                <div class="review-date">2024年11月18日 20:47</div>
-                                <div class="review-content">图书质量很好，希望更多的朋友能看。</div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="parent-container">
-                            <div class="head_portrait">
-                                <img src="images/default.png" height="100px" width="100px">
-                            </div>
-                            <div class="user_info">
-                                <div class="reviewer">cimeo</div>
-                                <div class="review-date">2024年11月18日 20:47</div>
-                                <div class="review-content">图书质量很好，希望更多的朋友能看。</div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="parent-container">
-                            <div class="head_portrait">
-                                <img src="images/default.png" height="100px" width="100px">
-                            </div>
-                            <div class="user_info">
-                                <div class="reviewer">cimeo</div>
-                                <div class="review-date">2024年11月18日 20:47</div>
-                                <div class="review-content">图书质量很好，希望更多的朋友能看。</div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="parent-container">
-                            <div class="head_portrait">
-                                <img src="images/default.png" height="100px" width="100px">
-                            </div>
-                            <div class="user_info">
-                                <div class="reviewer">cimeo</div>
-                                <div class="review-date">2024年11月18日 20:47</div>
-                                <div class="review-content">图书质量很好，希望更多的朋友能看。</div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="parent-container">
-                            <div class="head_portrait">
-                                <img src="images/default.png" height="100px" width="100px">
-                            </div>
-                            <div class="user_info">
-                                <div class="reviewer">cimeo</div>
-                                <div class="review-date">2024年11月18日 20:47</div>
-                                <div class="review-content">图书质量很好，希望更多的朋友能看。</div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="parent-container">
-                            <div class="head_portrait">
-                                <img src="images/default.png" height="100px" width="100px">
-                            </div>
-                            <div class="user_info">
-                                <div class="reviewer">cimeo</div>
-                                <div class="review-date">2024年11月18日 20:47</div>
-                                <div class="review-content">图书质量很好，希望更多的朋友能看。</div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="parent-container">
-                            <div class="head_portrait">
-                                <img src="images/default.png" height="100px" width="100px">
-                            </div>
-                            <div class="user_info">
-                                <div class="reviewer">cimeo</div>
-                                <div class="review-date">2024年11月18日 20:47</div>
-                                <div class="review-content">图书质量很好，希望更多的朋友能看。</div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="parent-container">
-                            <div class="head_portrait">
-                                <img src="images/default.png" height="100px" width="100px">
-                            </div>
-                            <div class="user_info">
-                                <div class="reviewer">cimeo</div>
-                                <div class="review-date">2024年11月18日 20:47</div>
-                                <div class="review-content">图书质量很好，希望更多的朋友能看。</div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="parent-container">
-                            <div class="head_portrait">
-                                <img src="images/default.png" height="100px" width="100px">
-                            </div>
-                            <div class="user_info">
-                                <div class="reviewer">cimeo</div>
-                                <div class="review-date">2024年11月18日 20:47</div>
-                                <div class="review-content">图书质量很好，希望更多的朋友能看。</div>
-                            </div>
-                        </div>
-                    </li>
-                    <!-- 复制上面的li标签以添加更多评论 -->
+                        </li>
+                    </s:iterator>
                 </ul>
             </div>
         </div>
