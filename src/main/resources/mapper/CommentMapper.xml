@@ -7,6 +7,6 @@
     </insert>
     
     <select id="selectCommentByBookId" resultType="com.jycz.bookcycle.model.Comment">
-        SELECT * FROM Comment WHERE book_id = #{bookId}
+        SELECT * FROM Comment WHERE book_id = #{bookId} ORDER BY comment_id DESC
     </select>
 </mapper>

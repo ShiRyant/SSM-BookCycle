@@ -31,6 +31,21 @@
             font-size: 20px;
             font-family: 'Arial', sans-serif;
         }
+        .comment-box {
+            display: flex;
+            align-items: flex-end;
+            background-color: white;
+            padding-left: 25px;
+            padding-right: 25px;
+            margin-bottom: 10px;
+            margin-top: 10px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: relative;
+            font-size: 20px;
+            font-weight: 400;
+            text-align: justify;
+        }
     </style>
 </head>
 <body>
@@ -91,16 +106,15 @@
                     </s:form>
                 </s:if>
                 <ul>
-                    <s:iterator value="" var="">
+                    <s:iterator value="book.comments" var="comment">
                         <li>
                             <div class="parent-container">
                                 <div class="head_portrait">
                                     <img src="images/default.png" height="100px" width="100px">
                                 </div>
                                 <div class="user_info">
-                                    <div class="reviewer">cimeo</div>
-                                    <div class="review-date">2024年11月18日 20:47</div>
-                                    <div class="review-content">图书质量很好，希望更多的朋友能看。</div>
+                                    <div class="reviewer"><s:property value="#comment.username"/>        <s:property value="#comment.commentTime"/></div>
+                                    <div class="comment-box"><p><s:property value="#comment.content"/></p></div>
                                 </div>
                             </div>
                         </li>

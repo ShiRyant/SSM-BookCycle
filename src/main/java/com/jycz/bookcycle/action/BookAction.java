@@ -1,7 +1,9 @@
 package com.jycz.bookcycle.action;
 
 import com.jycz.bookcycle.model.Book;
+import com.jycz.bookcycle.model.Comment;
 import com.jycz.bookcycle.service.BookService;
+import com.jycz.bookcycle.service.CommentService;
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
 import lombok.Getter;
@@ -23,6 +25,9 @@ import java.util.List;
 public class BookAction extends ActionSupport implements ModelDriven<Book> {
     @Autowired
     private BookService bookService;
+    @Autowired
+    private CommentService commentService;
+
     private List<Book> books;
     private String searchText;
 
@@ -40,6 +45,8 @@ public class BookAction extends ActionSupport implements ModelDriven<Book> {
     public String bookDetail() {
         bookId = Integer.parseInt(request.getParameter("bookId"));
         book = bookService.getBook(bookId);
+        List<Comment> comments = commentService.getCommentsByBookId(bookId);
+        book.setComments(comments);
         books = bookService.getRandomBooks(7);
         return SUCCESS;
     }

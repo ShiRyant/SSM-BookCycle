@@ -75,7 +75,10 @@
             <result name="success">/cart.jsp</result>
         </action>
         <action name="commentAction-*" class="commentAction" method="{1}">
-            <result name="addComment" type="redirectAction">homeAction</result>
+            <result name="addComment" type="redirectAction">
+                <param name="actionName">bookAction-bookDetail</param>
+                <param name="bookId">${comment.bookId}</param>
+            </result>
         </action>
     </package>
 </struts>
