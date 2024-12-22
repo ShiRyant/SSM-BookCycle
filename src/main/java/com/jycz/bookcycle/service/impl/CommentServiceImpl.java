@@ -14,16 +14,25 @@ public class CommentServiceImpl implements CommentService {
     private CommentMapper commentMapper;
 
     @Override
-    public boolean addComment(Comment comment) {
+    public void addComment(Comment comment) {
         boolean result;
         if(comment == null)
             result = false;
         result = commentMapper.saveComment(comment);
-        return result;
     }
 
     @Override
     public List<Comment> getCommentsByBookId(int bookId) {
         return commentMapper.selectCommentByBookId(bookId);
+    }
+
+    @Override
+    public List<Comment> getAllComments() {
+        return commentMapper.getAllComment();
+    }
+
+    @Override
+    public void deleteComment(int commentId) {
+        commentMapper.deleteCommentById(commentId);
     }
 }

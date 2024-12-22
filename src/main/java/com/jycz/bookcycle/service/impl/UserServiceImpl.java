@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
+import java.util.List;
 
 @Service("userService")
 public class UserServiceImpl implements UserService {
@@ -87,12 +88,8 @@ public class UserServiceImpl implements UserService {
         }
     }
 
-//    @Override
-//    public boolean applyForSeller(String userId, Seller sellerInfo) {
-//        int rows = userMapper.updateUserToSeller(userId);
-//        if(rows > 0){
-//            return sellerService.updateSeller(sellerInfo);
-//        }
-//        return false;
-//    }
+    @Override
+    public List<User> getAllUsers() {
+        return userMapper.findAll();
+    }
 }

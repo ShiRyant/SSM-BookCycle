@@ -5,6 +5,8 @@ import com.jycz.bookcycle.model.Comment;
 import java.util.List;
 
 public interface CommentService {
-    boolean addComment(Comment comment);
+    void addComment(Comment comment);
     List<Comment> getCommentsByBookId(int bookId);
+    List<Comment> getAllComments();
+    void deleteComment(int commentId);
 }

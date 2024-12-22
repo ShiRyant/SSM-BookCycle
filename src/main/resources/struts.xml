@@ -85,5 +85,16 @@
                 <param name="bookId">${comment.bookId}</param>
             </result>
         </action>
+        <action name="adminAction-*" class="adminAction" method="{1}">
+            <result name="loginError">/login_admin.jsp</result>
+            <result name="loginSuccess">/WEB-INF/admin/dashboard.jsp</result>
+            <result name="getAllUserList">/WEB-INF/admin/user_management.jsp</result>
+            <result name="getAllBookList">/WEB-INF/admin/book_management.jsp</result>
+            <result name="getAllCommentList">/WEB-INF/admin/comment_management.jsp</result>
+            <result name="deleteCommentSuccess" type="redirectAction">adminAction-getAllCommentList</result>
+            <result name="deleteUserSuccess" type="redirectAction">adminAction-getAllUserList</result>
+            <result name="deleteBookSuccess" type="redirectAction">adminAction-getAllBookList</result>
+            <result name="home">/WEB-INF/admin/dashboard.jsp</result>
+        </action>
     </package>
 </struts>

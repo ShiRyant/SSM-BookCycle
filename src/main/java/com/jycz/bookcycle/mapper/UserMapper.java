@@ -3,6 +3,8 @@ package com.jycz.bookcycle.mapper;
 import com.jycz.bookcycle.model.User;
 import org.apache.ibatis.annotations.Mapper;
 
+import java.util.List;
+
 @Mapper
 public interface UserMapper {
     boolean save(User user);
@@ -10,5 +12,5 @@ public interface UserMapper {
     boolean delete(String userId);
     User findById(String userId);
     User findByUsername(String username);
-    //int updateUserToSeller(String userId);
+    List<User> findAll();
 }

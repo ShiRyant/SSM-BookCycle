@@ -56,4 +56,9 @@ public class BookServiceImpl implements BookService {
     public List<Book> getBooksByCategory(String category) {
         return bookMapper.getBooksByCategory(category);
     }
+
+    @Override
+    public List<Book> getAllBooks() {
+        return bookMapper.getAllBooks();
+    }
 }

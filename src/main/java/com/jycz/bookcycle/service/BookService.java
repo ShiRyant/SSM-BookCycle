@@ -12,4 +12,5 @@ public interface BookService {
     List<Book> getRandomBooks(int count);
     List<Book> getBooksByName(String bookName);
     List<Book> getBooksByCategory(String category);
+    List<Book> getAllBooks();
 }

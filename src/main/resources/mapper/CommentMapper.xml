@@ -9,4 +9,12 @@
     <select id="selectCommentByBookId" resultType="com.jycz.bookcycle.model.Comment">
         SELECT * FROM Comment WHERE book_id = #{bookId} ORDER BY comment_id DESC
     </select>
+
+    <select id="getAllComment" resultType="com.jycz.bookcycle.model.Comment">
+        SELECT * FROM Comment ORDER BY comment_id DESC
+    </select>
+
+    <delete id="deleteCommentById">
+        DELETE FROM Comment WHERE comment_id = #{commentId}
+    </delete>
 </mapper>

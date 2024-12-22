@@ -1,9 +1,9 @@
 <%@ taglib prefix="s" uri="/struts-tags" %>
-<%@ page contentType="text/html;charset=UTF-8" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html>
 <head>
-    <title>登录-BookCycle</title>
+    <title>BookCycle-管理员登录</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -41,13 +41,10 @@
             padding: 15px; /* 增加内边距 */
             border: none;
             border-radius: 5px;
-            background-color: #5cb85c;
+            background-image:linear-gradient(120deg,#a1c4fd 0%, #c2e9fb 100%);
             color: white;
             cursor: pointer;
             width: 100%; /* 设置提交按钮宽度为100% */
-        }
-        .button-style:hover {
-            background-color: #4cae4c;
         }
         .register-link {
             margin-top: 15px; /* 增加上边距 */
@@ -56,18 +53,16 @@
     </style>
     <link rel="icon" href="favicon.ico">
 </head>
+</head>
 <body>
 <div class="login-container">
-    <h2 onclick="window.location.href = 'login_admin.jsp'">登录</h2>
-    <s:form action="userAction-userLogin" method="post" namespace="/" cssClass="form-style">
-        <s:textfield name="username" cssClass="input-style" placeholder="用户名" required="true"/>
+    <h2 onclick="window.location.href = 'login.jsp'">管理员登录</h2>
+    <s:form action="adminAction-adminLogin" method="post" namespace="/" cssClass="form-style">
+        <s:textfield name="adminName" cssClass="input-style" placeholder="管理员账号" required="true"/>
         <s:password name="password" cssClass="input-style" placeholder="密码" required="true"/>
         <s:actionerror cssStyle="padding-left: 20px"/>
-        <s:submit value="登录" cssClass="button-style"/>
+        <s:submit value="Login" cssClass="button-style" cssStyle="font-weight: bold"/>
     </s:form>
-    <div class="register-link">
-        <a href="register.jsp">没有账号？去注册</a>
-    </div>
 </div>
 </body>
 </html>
