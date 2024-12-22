@@ -48,11 +48,6 @@
             <result name="userCenter">/personal_center.jsp</result>
             <result name="input">/register.jsp</result>
         </action>
-        <action name="uploadImage" class="com.jycz.bookcycle.action.FileUploadAction">
-            <result name="success">/home.html</result>
-            <result name="error">/test.jsp</result>
-            <result name="input">/test.jsp</result>
-        </action>
         <action name="sellerAction" class="sellerAction">
             <result name="success" type="redirectAction">homeAction</result>
             <result name="error">/become_seller.jsp</result>
@@ -95,6 +90,9 @@
             <result name="deleteUserSuccess" type="redirectAction">adminAction-getAllUserList</result>
             <result name="deleteBookSuccess" type="redirectAction">adminAction-getAllBookList</result>
             <result name="home">/WEB-INF/admin/dashboard.jsp</result>
+            <result name="addBook">/WEB-INF/admin/add_book.jsp</result>
+            <result name="addBookError">/WEB-INF/admin/add_book.jsp</result>
+            <result name="addBookSuccess" type="redirectAction">adminAction-getAllBookList</result>
         </action>
     </package>
 </struts>

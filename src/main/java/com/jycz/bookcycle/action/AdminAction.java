@@ -14,6 +14,10 @@ import org.springframework.stereotype.Component;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.util.List;
 
 @Component("adminAction")
@@ -47,6 +51,12 @@ public class AdminAction extends ActionSupport {
     private HttpServletRequest request = ServletActionContext.getRequest();
     private HttpServletResponse response = ServletActionContext.getResponse();
     private HttpSession session = ServletActionContext.getRequest().getSession();
+
+    private File img;
+    private String imgContentType;
+    private String imgFileName;
+    private String imgUploadPath = "/data/images/";
+
     @Autowired
     private CommentMapper commentMapper;
 
@@ -97,5 +107,47 @@ public class AdminAction extends ActionSupport {
 
     public String redirectHome() {
         return "home";
+    }
+
+    public String redirectAddBook() {
+        return "addBook";
+    }
+
+    public String addBook() {
+        if(img == null) {
+            addActionError("请上传书籍图片！");
+            return "addBookError";
+        }
+
+        if(!imgFileName.endsWith(".jpg")) {
+            addActionError("请上传jpg图片格式");
+            return "addBookError";
+        }
+
+        if(book != null) {
+
+            String imgExtension = imgFileName.substring(imgFileName.lastIndexOf("."));
+            String newImgName = book.getTitle() + imgExtension;
+
+            File newImg = new File(imgUploadPath + newImgName);
+
+            try(FileInputStream fis = new FileInputStream(img);
+                FileOutputStream fos = new FileOutputStream(newImg)){
+                byte[] buffer = new byte[1024];
+                int length;
+                while ((length = fis.read(buffer)) > 0) {
+                    fos.write(buffer, 0, length);
+                }
+            } catch (IOException e){
+                addActionError("书籍图片上传失败，请重试！");
+                return "addBookError";
+            }
+
+            bookService.saveBook(book);
+            return "addBookSuccess";
+        }
+
+        addActionError("添加书籍失败！请重试");
+        return "addBookError";
     }
 }

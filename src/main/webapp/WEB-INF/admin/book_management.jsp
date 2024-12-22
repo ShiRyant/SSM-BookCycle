@@ -66,11 +66,11 @@
                 flex: 1 1 100%;
             }
         }
-
     </style>
 </head>
 <body style="margin: 0">
     <%@ include file="navbar_admin.jsp"%>
+    <h2 style="margin-left: 60px" onclick="window.location.href ='adminAction-redirectAddBook'">点我新增书籍</h2>
     <div class="main-container">
         <div class="book-container">
             <s:iterator value="bookList" var="book">
@@ -81,7 +81,6 @@
                     <p>ISBN: <s:property value="#book.isbn" /></p>
                     <p>价格: <s:property value="#book.price" /></p>
                     <div class="actions">
-                        <button onclick="editBook('<s:property value='%{id}'/>')">编辑</button>
                         <button onclick="confirmDelete()">删除</button>
                     </div>
                 </div>
