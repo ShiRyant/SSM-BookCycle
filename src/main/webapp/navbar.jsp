@@ -82,7 +82,7 @@
     <ul>
         <li><a href="homeAction" class="active">首页</a></li>
         <li><a href="classification.jsp">二手书分类概况</a></li>
-        <li><a href="sellerAction">成为卖家</a></li>
+        <li><a href="become_seller.jsp">成为卖家</a></li>
         <li><a href="charity.jsp">公益项目</a></li>
         <li><a href="usage-docs.jsp">帮助中心</a></li>
         <li><a href="cartAction">购物车</a></li>

@@ -106,6 +106,7 @@
             border-radius: 3px;
         }
     </style>
+    <link rel="icon" href="favicon.ico">
 </head>
 <body style="margin: 0">
 <div class="cart-container">
@@ -142,7 +143,7 @@
             <input type="checkbox" id="select-all" checked> 全选
             总计: <span id="total-items">0</span>本
         </div>
-        <div class="total">
+        <div class="total" onclick="submitCart()">
             ¥<span id="total-price">0</span>
         </div>
     </div>
@@ -269,6 +270,14 @@
             calculateTotalPrice();
         });
     };
+
+    function submitCart() {
+        const userConfirmed = confirm("您确定要结算购物车所有商品吗？");
+        if (userConfirmed) {
+            alert("结算成功，合计" + document.getElementById("total-price").innerText + "元，感谢您的支持！")
+            window.location.href = 'removeAllItem';
+        }
+    }
 
 </script>
 

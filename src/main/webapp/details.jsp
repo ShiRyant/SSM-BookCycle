@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="details.css">
     <link rel="stylesheet" href="navbar.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.ico">
     <style>
         .submit-button {
             padding: 8px 15px;
@@ -110,9 +111,9 @@
                         <li>
                             <div class="parent-container">
                                 <div class="head_portrait">
-                                    <img src="images/default.png" height="100px" width="100px">
+                                    <img src="images/default.png" height="64px" width="64px" style="border-radius: 5px;border: black solid 1px;margin-top: 20px">
                                 </div>
-                                <div class="user_info">
+                                <div class="user_info" style="margin-left: -50px">
                                     <div class="reviewer"><s:property value="#comment.username"/>        <s:property value="#comment.commentTime"/></div>
                                     <div class="comment-box"><p><s:property value="#comment.content"/></p></div>
                                 </div>

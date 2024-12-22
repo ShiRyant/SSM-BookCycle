@@ -45,16 +45,4 @@ public class SellerServiceImpl implements SellerService {
         return result;
     }
 
-    @Override
-    public boolean registerSeller(Seller seller, String userId) {
-        try {
-            seller.setSellerId("S" + userId);
-            seller.setUserId(userId);
-            sellerMapper.save(seller);
-        } catch (Exception e) {
-            e.printStackTrace();
-            return false;
-        }
-        return true;
-    }
 }

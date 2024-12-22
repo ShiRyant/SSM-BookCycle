@@ -7,6 +7,6 @@ import org.apache.ibatis.annotations.Mapper;
 public interface SellerMapper {
     boolean save(Seller seller);
     boolean update(Seller seller);
-    boolean delete(String userId);
-    Seller getSellerById(String userId);
+    boolean delete(String sellerId);
+    Seller getSellerById(String sellerId);
 }

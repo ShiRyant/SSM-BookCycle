@@ -54,6 +54,7 @@
             text-align: center;
         }
     </style>
+    <link rel="icon" href="favicon.ico">
 </head>
 <body>
 <div class="login-container">

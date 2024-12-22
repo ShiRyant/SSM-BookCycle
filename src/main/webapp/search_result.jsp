@@ -5,6 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <title>搜索结果</title>
+    <link rel="icon" href="favicon.ico">
     <style>
         .quick-help-container {
             width: 230px;

@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>BookCycle-公益项目</title>
+    <link rel="icon" href="favicon.ico">
     <style>
         body {
             font-family: Arial, sans-serif;

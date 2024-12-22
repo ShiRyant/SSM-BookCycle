@@ -4,6 +4,7 @@
 <html>
 <head>
     <title>个人中心-<s:property value="#session.user.username"/></title>
+    <link rel="icon" href="favicon.ico">
     <style>
         .info-container {
             width: 700px;

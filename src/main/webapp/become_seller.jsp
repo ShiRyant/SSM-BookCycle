@@ -1,3 +1,4 @@
+<%@ taglib prefix="s" uri="/struts-tags" %>
 <%@ page contentType="text/html;charset=UTF-8" %>
 <!DOCTYPE html>
 <html>
@@ -232,6 +233,7 @@
             width: 1800px;
         }
     </style>
+    <link rel="icon" href="favicon.ico">
 </head>
 <body>
 <script src="loadNavbar.js"></script>
@@ -312,70 +314,65 @@
             </div>
         </div>
         <div class="right-side">
-            <div class="form-container">
-                <div class="note">
-                    <p>1. 请您将图书打包严实，填写您的地址信息，用于快递上门取件或送件。<span style="color: #E33B3B">图书最少满10本才可以提交订单。</span></p>
-                    <p>2. 我们将在1-3个工作日内通过电话联系您进行审核，请您耐心等待并保持电话通畅。</p>
-                </div>
+            <s:form action="sellerAction" namespace="/" method="post" enctype="multipart/form-data">
+                <div class="form-container">
+                    <div class="note">
+                        <p>1. 请您将图书打包严实，填写您的地址信息，用于快递上门取件或送件。</p>
+                        <p>2. 我们将在1-3个工作日内通过电话联系您进行审核，请您耐心等待并保持电话通畅。</p>
+                    </div>
 
-                <div class="section-title">个人信息</div>
-                <div class="form-group">
-                    <label for="real-name">真实姓名：</label>
-                    <input type="text" id="real-name" name="real-name">
-                </div>
-                <div class="form-group">
-                    <label for="phone">联系电话：</label>
-                    <input type="text" id="phone" name="phone">
-                    <div class="instruction">*号码须为11位数</div>
-                    <div id="phone-error" class="error"></div>
-                </div>
-                <div class="form-group">
-                    <label for="address">详细地址：</label>
-                    <input type="text" id="address" name="address">
-                </div>
-                <div class="form-group">
-                    <label for="id-number">身份证号码：</label>
-                    <input type="text" id="id-number" name="id-number">
-                    <div class="instruction">*身份证号码须为18位</div>
-                    <div id="id-error" class="error"></div>
-                </div>
+                    <div class="section-title">个人信息</div>
+                    <div class="form-group">
+                        <label for="real-name">真实姓名：</label>
+                        <input type="text" id="real-name" name="realName">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">联系电话：</label>
+                        <input type="text" id="phone" name="sellerPhone">
+                        <div class="instruction">*号码须为11位数</div>
+                        <div id="phone-error" class="error"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="address">详细地址：</label>
+                        <input type="text" id="address" name="address">
+                    </div>
+                    <div class="form-group">
+                        <label for="id-number">身份证号码：</label>
+                        <input type="text" id="id-number" name="idCardNo">
+                        <div class="instruction">*身份证号码须为18位</div>
+                        <div id="id-error" class="error"></div>
+                    </div>
 
-                <div class="section-title">图书信息</div>
-                <div class="form-group">
-                    <label for="book-count">图书数量：</label>
-                    <input type="number" id="book-count" name="book-count" min="10">
-                    <div class="instruction">*10本起售</div>
-                    <div id="book-count-error" class="error"></div>
-                </div>
-                <div class="form-group">
-                    <label for="isbn">ISBN号：</label>
-                    <textarea id="isbn" name="isbn" rows="4" cols="50"></textarea>
-                    <div class="instruction">*每本书的ISBN号占一行</div>
-                </div>
-                <div class="form-group">
-                    <label for="book-image">图书照片：</label>
-                    <input type="file" id="book-image" name="book-image">
-                </div>
-                <div class="section-title">交易信息</div>
-                <div class="must_note">
-                    <p>确认订单：合计：10本</p>
-                    <p>*实际收入以收书审核后为准</p>
-                </div>
+                    <div class="section-title">图书信息</div>
+                    <div class="form-group">
+                        <label for="book-count">图书数量：</label>
+                        <input type="number" id="book-count" name="bookNum" value="1">
+                        <div id="book-count-error" class="error"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="isbn">书籍信息：</label>
+                        <textarea id="isbn" name="bookInfo" rows="4" cols="50"></textarea>
+                        <div class="instruction">*填写书籍名，ISBN等信息</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="book-image">图书照片：</label>
+                        <input type="file" id="book-image" name="img">
+                    </div>
+                    <s:actionerror cssStyle="padding-left: 10px"/>
+                    <s:fielderror cssStyle="padding-left: 10px"/>
+                    <div class="must_note">
+                        <p>*实际收入以收书审核后为准，审核通过后，我们会联系您并支付对应款项</p>
+                    </div>
 
-                <p>卖书须知：</p>
-                <div class="must_know">
-                    <p>1、回收订单包裹签收后7个工作日内，将完成书籍的审核与打款(审核周期内勿催)，因订单较多，审核稍慢，请您耐心等待，谢谢理解!</p>
-                    <p>2、请您核对好订单书籍后，再提交订单，并自行打包好，待取件员验货后再封口。请勿随意放置包裹或将未打包好的图书直接交给取件员，由此导致订单书籍遗失，平台概不负责</p>
-                    <p>3、卖书运费(不含包装费)由我们承担,提交订单后,我们将安排京东或德邦上门取件(请勿自寄或到付件)，不需要您垫付运费。</p>
+                    <p>卖书须知：</p>
+                    <div class="must_know">
+                        <p>1、回收订单包裹签收后7个工作日内，将完成书籍的审核与打款(审核周期内勿催)，因订单较多，审核稍慢，请您耐心等待，谢谢理解!</p>
+                        <p>2、请您核对好订单书籍后，再提交订单，并自行打包好，待取件员验货后再封口。请勿随意放置包裹或将未打包好的图书直接交给取件员，由此导致订单书籍遗失，平台概不负责</p>
+                        <p>3、卖书运费(不含包装费)由我们承担,提交订单后,我们将安排京东或德邦上门取件(请勿自寄或到付件)，不需要您垫付运费。</p>
+                    </div>
+                    <button type="submit" class="submit-btn">提交</button>
                 </div>
-
-                <div class="form-group">
-                    <label for="pay">上传收款码：</label>
-                    <input type="file" id="pay" name="book-image">
-                    <div class="instruction">*点击上传收款码，审核通过后向您付款</div>
-                </div>
-                <button type="button" class="submit-btn" onclick="validateForm()">提交</button>
-            </div>
+            </s:form>
         </div>
     </div>
 </div>

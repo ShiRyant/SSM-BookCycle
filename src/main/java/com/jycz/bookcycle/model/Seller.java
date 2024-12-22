@@ -1,14 +1,17 @@
 package com.jycz.bookcycle.model;
 
+import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
-@Getter
-@Setter
-public class Seller extends User {
+@Data
+public class Seller {
     private String sellerId;
     private String realName;
     private String sellerPhone;
     private String idCardNo;
-    private String Address;
+    private String address;
+    private int bookNum;
+    private String bookInfo;
+    private String bookUrl;
 }

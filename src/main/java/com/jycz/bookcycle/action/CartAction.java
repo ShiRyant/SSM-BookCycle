@@ -46,4 +46,13 @@ public class CartAction extends ActionSupport implements ModelDriven<CartItem> {
         }
         return SUCCESS;
     }
+
+    public String removeAllItem() {
+        List<CartItem> items = (List<CartItem>) session.getAttribute("cart");
+        if(items != null) {
+            items.clear();
+            session.setAttribute("cart", items);
+        }
+        return "removeAll";
+    }
 }

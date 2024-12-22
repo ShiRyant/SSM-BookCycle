@@ -7,5 +7,4 @@ public interface SellerService {
     Seller getSellerByUserId(String userId);
     boolean updateSeller(Seller seller);
     boolean deleteSeller(String userId);
-    boolean registerSeller(Seller seller, String userId);
 }

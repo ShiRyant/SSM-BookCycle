@@ -14,6 +14,5 @@ public class User {
     private String salt;
     private String phoneNumber;
     private String email;
-    private String avatar;
     private Date registerTime;
 }

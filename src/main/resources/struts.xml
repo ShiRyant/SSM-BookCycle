@@ -53,9 +53,10 @@
             <result name="error">/test.jsp</result>
             <result name="input">/test.jsp</result>
         </action>
-        <action name="sellerAction-*" class="sellerAction" method="{1}">
-            <result name="success">/sellerInfo.jsp</result>
-            <result name="error">/test.jsp</result>
+        <action name="sellerAction" class="sellerAction">
+            <result name="success" type="redirectAction">homeAction</result>
+            <result name="error">/become_seller.jsp</result>
+            <result name="input">/become_seller.jsp</result>
         </action>
         <action name="bookAction-*" class="bookAction" method="{1}">
             <result name="success">/details.jsp</result>
@@ -74,6 +75,9 @@
         </action>
         <action name="removeCartItem" class="com.jycz.bookcycle.action.CartAction" method="removeItem">
             <result name="success">/cart.jsp</result>
+        </action>
+        <action name="removeAllItem" class="com.jycz.bookcycle.action.CartAction" method="removeAllItem">
+            <result name="removeAll" type="redirectAction">homeAction</result>
         </action>
         <action name="commentAction-*" class="commentAction" method="{1}">
             <result name="addComment" type="redirectAction">
