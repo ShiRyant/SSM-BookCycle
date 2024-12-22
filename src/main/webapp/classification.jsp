@@ -52,7 +52,7 @@
 </head>
 <body>
 <div class="container" style="margin-left: 9%">
-    <img src="images/classification.png" style="width: 1500px;height: auto;margin-bottom: 20px">
+    <img src="images/classification.webp" style="width: 1500px;height: auto;margin-bottom: 20px">
     <section class="category-section">
         <a href="bookAction-searchBooksByCategory?searchText=计算机与网络"><h1>计算机与网络</h1></a>
     </section>

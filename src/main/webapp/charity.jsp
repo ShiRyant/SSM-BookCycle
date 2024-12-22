@@ -367,7 +367,7 @@
     <div class="header">
         <div class="charity-image-container">
             <div class="first-image" style="background-image: url('images/Public_welfare_poster.png')"></div>
-            <div class="second-image" style="background-image: url('images/connect_us.png')"></div>
+            <div class="second-image" style="background-image: url('images/connect_us.webp')"></div>
         </div>
     </div>
 
@@ -459,9 +459,9 @@
     <div class="exhibition-line"></div>
     <div class="carousel-container">
         <div class="carousel-slider">
-            <div class="carousel-item"><img src="images/exhibition1.png" alt="Image 1"></div>
-            <div class="carousel-item"><img src="images/exhibition2.jpg" alt="Image 2"></div>
-            <div class="carousel-item"><img src="images/exhibition3.jpeg" alt="Image 3"></div>
+            <div class="carousel-item"><img src="images/exhibition1.webp" alt="Image 1"></div>
+            <div class="carousel-item"><img src="images/exhibition2.webp" alt="Image 2"></div>
+            <div class="carousel-item"><img src="images/exhibition3.webp" alt="Image 3"></div>
             <div class="carousel-item"><img src="images/charity_12.jpg" alt="Image 4"></div>
             <div class="carousel-item"><img src="images/charity_13.jpg" alt="Image 5"></div>
             <div class="carousel-item"><img src="images/charity_14.jpg" alt="Image 6"></div>

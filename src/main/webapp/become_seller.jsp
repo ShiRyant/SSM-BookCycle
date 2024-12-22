@@ -253,61 +253,61 @@
                 </div>
                 <div class="seller_container">
                     <div class="leaderboard-item up">
-                        <img src="images/label_img.png" alt="Flag Icon">
+                        <img src="images/lable_img.png" alt="Flag Icon">
                         卖家1号
                     </div>
                 </div>
                 <div class="seller_container">
                     <div class="leaderboard-item down">
-                        <img src="images/label_img.png" alt="Flag Icon">
+                        <img src="images/lable_img.png" alt="Flag Icon">
                         卖家2号
                     </div>
                 </div>
                 <div class="seller_container">
                     <div class="leaderboard-item up">
-                        <img src="images/label_img.png" alt="Flag Icon">
+                        <img src="images/lable_img.png" alt="Flag Icon">
                         卖家3号
                     </div>
                 </div>
                 <div class="seller_container">
                     <div class="leaderboard-item down">
-                        <img src="images/label_img.png" alt="Flag Icon">
+                        <img src="images/lable_img.png" alt="Flag Icon">
                         卖家4号
                     </div>
                 </div>
                 <div class="seller_container">
                     <div class="leaderboard-item up">
-                        <img src="images/label_img.png" alt="Flag Icon">
+                        <img src="images/lable_img.png" alt="Flag Icon">
                         卖家5号
                     </div>
                 </div>
                 <div class="seller_container">
                     <div class="leaderboard-item down">
-                        <img src="images/label_img.png" alt="Flag Icon">
+                        <img src="images/lable_img.png" alt="Flag Icon">
                         卖家6号
                     </div>
                 </div>
                 <div class="seller_container">
                     <div class="leaderboard-item up">
-                        <img src="images/label_img.png" alt="Flag Icon">
+                        <img src="images/lable_img.png" alt="Flag Icon">
                         卖家7号
                     </div>
                 </div>
                 <div class="seller_container">
                     <div class="leaderboard-item down">
-                        <img src="images/label_img.png" alt="Flag Icon">
+                        <img src="images/lable_img.png" alt="Flag Icon">
                         卖家8号
                     </div>
                 </div>
                 <div class="seller_container">
                     <div class="leaderboard-item down">
-                        <img src="images/label_img.png" alt="Flag Icon">
+                        <img src="images/lable_img.png" alt="Flag Icon">
                         卖家9号
                     </div>
                 </div>
                 <div class="seller_container">
                     <div class="leaderboard-item up">
-                        <img src="images/label_img.png" alt="Flag Icon">
+                        <img src="images/lable_img.png" alt="Flag Icon">
                         卖家10号
                     </div>
                 </div>

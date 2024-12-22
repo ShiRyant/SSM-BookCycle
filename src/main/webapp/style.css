@@ -68,19 +68,6 @@ nav ul li a {
     color: black;
 }
 
-nav ul li .icon {
-    display: block;
-    width: 16px;
-    height: 16px;
-    background-image: url('images/triangle_gray.png'); /* 默认图标 */
-    background-size: cover;
-    margin: 5px auto 0; /* 图标在文字下方 */
-}
-
-nav ul li.active .icon {
-    background-image: url('images/triangle.png'); /* 激活状态的图标 */
-}
-
 #book-list {
     display: flex;
     flex-wrap: wrap;
