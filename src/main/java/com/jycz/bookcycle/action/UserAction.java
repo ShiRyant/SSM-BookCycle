@@ -25,6 +25,7 @@ public class UserAction extends ActionSupport implements ModelDriven<User>{
     private UserService userService;
 
     private User user = new User();
+    private String confirm;
     private HttpServletRequest request = ServletActionContext.getRequest();
     private HttpServletResponse response  = ServletActionContext.getResponse();
     private HttpSession session = ServletActionContext.getRequest().getSession();
@@ -34,10 +35,13 @@ public class UserAction extends ActionSupport implements ModelDriven<User>{
     }
 
     public String userLogin(){
+
         User loginUser = userService.login(user);
 
-        if(user == null)
+        if(loginUser == null) {
+            addActionError("用户名或密码错误！");
             return "error";
+        }
 
         user.setUserId(loginUser.getUserId());
         user.setUsername(loginUser.getUsername());
@@ -90,5 +94,42 @@ public class UserAction extends ActionSupport implements ModelDriven<User>{
 
     public String userCenter() {
         return "userCenter";
+    }
+
+    public void validateUserRegister() {
+        // 验证用户名
+        if (user.getUsername() == null || user.getUsername().isEmpty()) {
+            addFieldError("user.username", "用户名不能为空");
+        } else if (!user.getUsername().matches("^[a-zA-Z0-9]{6,12}$")) {
+            addFieldError("user.username", "用户名必须为6-12个字符的字母或数字");
+        }
+
+        // 验证密码
+        if (user.getPassword() == null || user.getPassword().isEmpty()) {
+            addFieldError("user.password", "密码不能为空");
+        } else if (!user.getPassword().matches("^.{6,16}$")) {
+            addFieldError("user.password", "密码必须为6-16个字符");
+        }
+
+        // 验证确认密码
+        if (confirm == null || confirm.isEmpty()) {
+            addFieldError("confirmPassword", "确认密码不能为空");
+        } else if (!confirm.equals(user.getPassword())) {
+            addFieldError("confirmPassword", "确认密码必须与密码一致");
+        }
+
+        // 验证电话
+        if (user.getPhoneNumber() == null || user.getPhoneNumber().isEmpty()) {
+            addFieldError("user.phone", "电话号码不能为空");
+        } else if (!user.getPhoneNumber().matches("^1\\d{10}$")) {
+            addFieldError("user.phone", "电话号码必须是11位数字，以1开头");
+        }
+
+        // 验证邮箱
+        if (user.getEmail() == null || user.getEmail().isEmpty()) {
+            addFieldError("user.email", "邮箱不能为空");
+        } else if (!user.getEmail().matches("^[\\w.-]+@[\\w.-]+\\.[a-zA-Z]{2,6}$")) {
+            addFieldError("user.email", "请输入有效的邮箱地址");
+        }
     }
 }

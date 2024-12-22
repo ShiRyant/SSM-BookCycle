@@ -60,10 +60,11 @@
     <h2>注册</h2>
     <s:form action="userAction-userRegister" namespace="/" method="post" cssClass="form-style">
         <s:textfield name="username" placeholder="用户名（6-12个字符，字母数字）" required="true" cssClass="input-style"/>
-        <s:password name="password" placeholder="密码（8-16个字符）" required="true" cssClass="input-style"/>
-<%--        <s:password name="confirm" placeholder="确认密码" required="true" cssClass="input-style"/>--%>
+        <s:password name="password" placeholder="密码（6-16个字符）" required="true" cssClass="input-style"/>
+        <s:password name="confirm" placeholder="确认密码" required="true" cssClass="input-style"/>
         <s:textfield name="email" placeholder="邮箱" cssClass="input-style"/>
         <s:textfield name="phoneNumber" placeholder="电话" cssClass="input-style"/>
+        <s:fielderror cssStyle="padding-left: 20px"/>
         <s:submit value="注册" cssClass="button-style"/>
     </s:form>
     <div class="login-link">

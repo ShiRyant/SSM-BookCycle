@@ -61,6 +61,7 @@
     <s:form action="userAction-userLogin" method="post" namespace="/" cssClass="form-style">
         <s:textfield name="username" cssClass="input-style" placeholder="用户名" required="true"/>
         <s:password name="password" cssClass="input-style" placeholder="密码" required="true"/>
+        <s:actionerror cssStyle="padding-left: 20px"/>
         <s:submit value="登录" cssClass="button-style"/>
     </s:form>
     <div class="register-link">

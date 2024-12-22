@@ -50,6 +50,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public User login(User user) {
         User loginUser = userMapper.findByUsername(user.getUsername());
+
         if(loginUser == null)
             return null;
         String password = UserUtil.md5Password(user.getPassword(),loginUser.getSalt(),10);
