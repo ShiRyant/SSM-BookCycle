@@ -366,14 +366,14 @@
 <div class="container">
     <div class="header">
         <div class="charity-image-container">
-            <div class="first-image" style="background-image: url('images/Public_welfare_poster.png')"></div>
+            <div class="first-image" style="background-image: url('images/Public_welfare_poster.webp')"></div>
             <div class="second-image" style="background-image: url('images/connect_us.webp')"></div>
         </div>
     </div>
 
     <div class="news-section">
         <div class="title">
-            <img src="images/Headlines.png" width="80" height="80">
+            <img src="images/Headlines.webp" width="80" height="80">
             <h2>头条新闻</h2>
         </div>
         <ul>
@@ -391,9 +391,9 @@
         <!-- 左边的图片 -->
         <div class="ad-slider" style="margin-top: 10px">
             <div class="ad-slider-wrapper">
-                <div class="ad-slider-item"><img src="images/charity_5.png" alt="Slide 1"></div>
-                <div class="ad-slider-item"><img src="images/charity_10.png" alt="Slide 2"></div>
-                <div class="ad-slider-item"><img src="images/charity_11.png" alt="Slide 3"></div>
+                <div class="ad-slider-item"><img src="images/charity_5.webp" alt="Slide 1"></div>
+                <div class="ad-slider-item"><img src="images/charity_10.webp" alt="Slide 2"></div>
+                <div class="ad-slider-item"><img src="images/charity_11.webp" alt="Slide 3"></div>
                 <!-- 更多的轮播图片 -->
             </div>
             <a class="prev" onclick="moveSlide(-1)">&#10094;</a>
@@ -402,22 +402,22 @@
         <!-- 右边的图片 -->
         <div class="right-column">
             <div class="right-row">
-                <img src="images/charity_6.png" alt="Right Image 1" class="right-image" >
-                <img src="images/charity_7.png" alt="Right Image 2" class="right-image">
+                <img src="images/charity_6.webp" alt="Right Image 1" class="right-image" >
+                <img src="images/charity_7.webp" alt="Right Image 2" class="right-image">
             </div>
             <div class="right-row">
-                <img src="images/charity_8.png" alt="Right Image 3" class="right-image">
-                <img src="images/charity_9.png" alt="Right Image 4" class="right-image">
+                <img src="images/charity_8.webp" alt="Right Image 3" class="right-image">
+                <img src="images/charity_9.webp" alt="Right Image 4" class="right-image">
             </div>
         </div>
     </div>
-    <img src="images/renting.png" style="width: 100%;height: auto;margin-top: 20px;margin-bottom: 20px">
+    <img src="images/renting.webp" style="width: 100%;height: auto;margin-top: 20px;margin-bottom: 20px">
     <div class="horizontal_line-container">
         <span class="horizontal_line-title">爱心记录</span>
         <a href="#" class="more-link">更多>></a>
     </div>
     <div class="article">
-        <img src="images/charity_1.png" alt="Article Image">
+        <img src="images/charity_1.webp" alt="Article Image">
         <div class="record">
             <h2 class="article-title">教科院：捐赠爱心图书 助力乡村振兴</h2>
             <p class="article-content">捐赠仪式上，双庙村党总支书记王明才简要介绍了当前农家书屋建设及农村儿童阅读条件现状，并对教科院的爱心之举表示高度的赞扬
@@ -428,7 +428,7 @@
     </div>
 
     <div class="article">
-        <img src="images/charity_2.png" alt="Article Image">
+        <img src="images/charity_2.webp" alt="Article Image">
         <div class="record">
             <h2 class="article-title">和平街社区开展“手拉手 心连心 共沐书香”捐书活动</h2>
             <p class="article-content">“捐一缕书香，献一片真情”，为了深入开展精神文明建设和新时代文明实践活动。近日，越河街道和平街社区开展“手拉手 心连心 共沐书香”捐书活动。
@@ -438,7 +438,7 @@
     </div>
 
     <div class="article">
-        <img src="images/charity_3.png" alt="Article Image">
+        <img src="images/charity_3.webp" alt="Article Image">
         <div class="record">
             <h2 class="article-title">书送梦想·点亮未来丨一本书公益活动全国捐赠计划第一站走进新疆巴楚！</h2>
             <p class="article-content">继一本书公益活动全国捐赠计划启动仪式落幕之后，一本书志愿服务队积极联合爱心社区、爱心企业及社会各界爱心人士，为老少边地区的孩子募集图书。本次被捐赠的
@@ -447,7 +447,7 @@
         </div>
     </div>
     <div class="article">
-        <img src="images/charity_4.png" alt="Article Image">
+        <img src="images/charity_4.webp" alt="Article Image">
         <div class="record">
             <h2 class="article-title">市青联开展“青心呵护童伴 文明与爱同行”爱心图书置换公益活动 </h2>
             <p class="article-content">为助力乡村振兴，充分发挥青联组织动员优势，进一步关心关爱乡村青少年健康成长，濮阳市青年联合会在龙都广场西门开展“青心呵护童伴 文明与爱同行”爱心图书置换公益活动。市青联各界别委员、市龙艺公益志愿服务中心、返乡大学生志愿
@@ -462,10 +462,10 @@
             <div class="carousel-item"><img src="images/exhibition1.webp" alt="Image 1"></div>
             <div class="carousel-item"><img src="images/exhibition2.webp" alt="Image 2"></div>
             <div class="carousel-item"><img src="images/exhibition3.webp" alt="Image 3"></div>
-            <div class="carousel-item"><img src="images/charity_12.jpg" alt="Image 4"></div>
-            <div class="carousel-item"><img src="images/charity_13.jpg" alt="Image 5"></div>
-            <div class="carousel-item"><img src="images/charity_14.jpg" alt="Image 6"></div>
-            <div class="carousel-item"><img src="images/charity_15.jpg" alt="Image 7"></div>
+            <div class="carousel-item"><img src="images/charity_12.webp" alt="Image 4"></div>
+            <div class="carousel-item"><img src="images/charity_13.webp" alt="Image 5"></div>
+            <div class="carousel-item"><img src="images/charity_14.webp" alt="Image 6"></div>
+            <div class="carousel-item"><img src="images/charity_15.webp" alt="Image 7"></div>
             <!-- 更多图片 -->
         </div>
         <div class="carousel-arrow left" onclick="moveSlide(-1)">&#10094;</div>

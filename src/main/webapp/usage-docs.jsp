@@ -204,7 +204,7 @@
 </div>
 <div class="container">
     <div class="left-container">
-        <img src="images/help-center.png" style="width: 220px; height: auto;margin-bottom: 20px">
+        <img src="images/help-center.webp" style="width: 220px; height: auto;margin-bottom: 20px">
         <div class="sidebar">
             <a href="#home"><img src="images/serial_number.png" alt="Home Icon">帮助首页</a>
             <a href="#buy"><img src="images/serial_number.png" alt="Buy Icon">如何购书</a>
